@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta http-equiv1="refresh" content="5" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--    Cargando fuentes y estilos-->
+	<link rel="stylesheet" href="css/normalize.css">
+
+
+	<!--    cargando iconos de fontawesome-->
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Styles -->
+	<style>
+		#chartdiv {
+			width: 100%;
+			height: 200px;
+		}
+
+		#chartdiv2 {
+			width: 100%;
+			height: 500px;
+		}
+	</style>
+
+
+	<title>Friendly Crop Modeling </title>
+</head>
+
+<body>
+
+	<section class="nabvar-internas mb-5">
+
+		<header class="encabezado-internas fixed-top wow bg-primary" role="banner" id="menu-interno">
+
+			<div class="container navbar d-flex flex-row align-items-center flex-wrap" id="navbar-interno">
+
+				<a href="index.html" class="logo-white order-0 order-lg-0">
+					<img src="img/logowhite.svg" alt="Logo Friendly Crop Modeling">
+				</a>
+
+				<a href="#" class="text-right">
+					<div class="circulo">USER</div>
+				</a>
+
+			</div>
+		</header><!-- /header -->
+
+	</section>
+
+
+
+	<section class="charts">
+		<div class="container">
+			<div class="row">
+
+				<canvas id="chartdiv"></canvas>
+				<!-- 
+							<div id="chartdiv" class="col-12"></div>
+
+						<div id="chartdiv2" class="col-12"></div> -->
+			</div>
+		</div>
+	</section>
+
+	<footer class="pie-pagina mt-5" role="contentinfo">
+		<img class="footer-top-img" src="img/top.svg" alt="">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-4 text-center mb-4">
+					<a href="#">
+						<img src="img/ciat.png" width="200px">
+					</a>
+				</div>
+				<div class="col-12 col-lg-4 text-center mb-4">
+					<a href="#">
+						<img src="img/icdf.png" width="200px">
+					</a>
+				</div>
+				<div class="col-12 col-lg-4 text-center mb-4">
+					<a href="#">
+						<img src="img/logohackaton-2021.png" width="200px">
+					</a>
+				</div>
+
+
+
+			</div>
+
+			<div class="row justify-content-lg-between aling-items-start text-light">
+				<div class="parrafo col-lg-4 mt-5">
+					<h2>About Us</h2>
+					<p class="text-justify">Friendly Crop Modeling (developed by Office farmers)
+						We are a group consisting of agronomist, programmer, designer, statistician, and scientist to
+						dedicate ourselves to improving the production and lives of 5 hundred million small farmers in
+						the world. </a></p>
+				</div>
+				<div class="sitemap col-lg-4 mt-5">
+					<h2>SiteMap</h2>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">How It Works</a></li>
+						<li><a href="#">Explore</a></li>
+						<li><a href="#">API</a></li>
+					</ul>
+
+				</div>
+				<div class="direccion col-lg-4 mt-5">
+					<h2>Contact</h2>
+					<div class="card-body">
+						<i class="fa fa-phone"></i>
+						<p class="d-inline ml-2">+505 00000 00000</p><br>
+						<i class="fa fa-map"></i>
+						<p class="d-inline ml-2">Managua, Nicaragua</p><br>
+						<i class="fa fa-envelope"></i>
+						<p class="d-inline ml-2">friendlycropmodeling@gmail.com</p><br>
+
+					</div>
+				</div>
+				<div class=" col-12 copy text-center mt-5">
+					<p>© 2021 Friendly Crop Modeling</p>
+					<ul>
+						<li class="d-inline-block"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="d-inline-block"><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li class="d-inline-block"><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+
+		</div>
+
+
+
+		<img src="img/bottom.svg" alt="">
+
+	</footer>
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+	<!-- Resources -->
+
+	<script src="js/chart.js"></script>
+
+	<script>
+
+		var ctx= document.getElementById("chartdiv").getContext("2d");
+
+		var mychart = new Chart( ctx, {
+			type: "line",
+			data: {
+				labels: ['col1', 'col2', 'col3'],
+				datasets:[{
+					label: 'num datos',
+					data: [10,9,5],
+					backgroundColor:[
+						'rgb(0,140,0)',
+						'rgb(0,0,140)',
+						'rgb(250,140,0)',
+					]
+				}]
+			},
+			options: {
+				responsive: true,
+				plugins: {
+				legend: {
+					position: 'top',
+				},
+				}
+			},
+		});
+
+		
+
+	</script>
+
+
+
+
+</body>
+
+</html>

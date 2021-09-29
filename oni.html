@@ -1,0 +1,781 @@
+<!doctype html>
+	<html lang="en">
+
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv1="refresh" content="5" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--    Cargando fuentes y estilos-->
+
+		<link rel="stylesheet" href="css/normalize.css">
+
+		<!--    cargando iconos de fontawesome-->
+		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="css/style.css">
+
+
+			<!-- datatables -->
+			<link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+			<!-- datatables extension SELECT -->
+			<link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+
+
+			<!-- extension BOTONES -->
+			<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+
+			<!-- extension REsponsive -->
+			<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+
+			<title>Friendly Crop Modeling </title>
+		</head>
+
+		<body>
+
+			<section class="nabvar-internas mb-5">
+
+				<header class="encabezado-internas fixed-top wow bg-primary" role="banner" id="menu-interno">
+
+					<div class="container navbar d-flex flex-row align-items-center flex-wrap" id="navbar-interno">
+
+						<a href="index.html" class="logo-white order-0 order-lg-0">
+							<img src="img/assets/logowhite.svg" alt="Logo Friendly Crop Modeling">
+						</a>
+
+						<a href="#" class="text-right">
+							<div class="circulo">USER</div>
+						</a>
+
+					</div>
+				</header><!-- /header -->
+
+			</section>
+
+
+			<section class="data">
+				<div class="container">
+					<div class="box1 row text-center p-1 d-flex flex-sm-wrap flex-md-wrap flex-lg-nowrap  justify-content-center">
+						<div class="btn-date row  flex-fill">
+							<div class="col-12">
+								<img src="img/assets/calendar.svg">
+							</div>
+							<div class="col-12">
+								<h2>Date</h2> <br>
+								<P>2021</P>
+							</div>
+						</div>
+						<div class="btn-average row flex-fill">
+
+							<div class="col-12">
+								<img src="img/assets/average.svg" >
+							</div>
+							<div class="col-12">
+								<h2>Average</h2> <br>
+								<span id="promedio">25</span>
+							</div>
+
+						</div>
+						<div class="btn-event row flex-fill">
+
+							<div class="col-12">
+								<img src="img/assets/meteorology.svg" >
+							</div>
+							<div class="col-12">
+								<h2>ONI Event</h2> <br>
+								<P>ME</P>
+							</div>
+
+						</div>
+
+						<div class="btn-charts row flex-fill">
+						
+						<div class="col-12">
+								<a href="charts.html"><img src="img/assets/data-collection.svg"></a>
+							</div>
+							<div class="col-12">
+								<h2>Charts</h2> <br>
+								<a href="charts.html">data comparison</a>
+							</div>
+							
+						</div>
+						<div class="btn-charts-2 row flex-fill">
+							<a href="charts.html">
+							<div class="col-12">
+								<img src="img/assets/monitor.svg"></a>
+							</div>
+							<div class="col-12">
+								<h2>Charts</h2> <br>
+								<a href="charts.html">Similar year comparison</a>
+							</div>
+							
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section class="botones-oni mt-5">
+
+				<div class="container">
+
+					<h1>Select ONI interactive table</h1>
+
+					<div class="col-12 mt-5">
+					<a href="#" class="btn btn-we mb-2">WE: Weak El Niño</a>
+					<a href="#" class="btn btn-me mb-2">ME:Moderate El Niño</a>
+					<a href="#" class="btn btn-se mb-2">SE: Strong El Niño</a>
+					<a href="#" class="btn btn-vse mb-2">VSE: Very Strong El Niño</a>
+					<a href="#" class="btn btn-wl mb-2">WL: Weak La Niña</a>
+					<a href="#" class="btn btn-ml mb-2">ML: Moderate La Niña</a>
+					<a href="#" class="btn btn-sl mb-2">SL: Strong La Niña</a>
+					<a href="#" class="btn btn-normal mb-2">Normal event</a>
+					<a href="#" class="btn btn-all mb-2">All ENSO TYPE </a>
+				</div>		
+				</div>
+				
+			</section>
+
+			<section class="table">
+				<div class="container">
+					<div class="box2">
+
+
+						<!-- para ejemplo simple -->
+						<table id="oni" class="display" style="width:100%">
+							<thead>
+								<tr>                
+									<th>YEAR</th>
+									<th>DJF</th>
+									<th>JFM</th>
+									<th>FMA</th>
+									<th>MAM</th>
+									<th>AMJ</th>
+									<th>MJJ</th>
+									<th>JJA</th>
+									<th>JAS</th>
+									<th>ASO</th>
+									<th>SON</th>
+									<th>OND</th>
+									<th>NDJ</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<tr class="row1">
+									<td class="column0 style3 s">2021</td>
+									<td class="DJF">-1</td>
+									<td class="column2 style4 n">-0.9</td>
+									<td class="column3 style4 n">-0.8</td>
+									<td class="column4 style4 n">-0.7</td>
+									<td class="column5 style4 n">-0.5</td>
+									<td class="column6 style5 f">-</td>
+									<td class="column7 style5 null"></td>
+									<td class="column8 style5 null"></td>
+									<td class="column9 style5 null"></td>
+									<td class="column10 style5 null"></td>
+									<td class="column11 style5 null"></td>
+									<td class="column12 style5 null"></td>
+								</tr>
+								<tr class="row2">
+									<td class="column0 style3 s">2020</td>
+									<td class="DJF">0.5</td>
+									<td class="column2 style4 n">0.5</td>
+									<td class="column3 style4 n">0.4</td>
+									<td class="column4 style4 n">0.2</td>
+									<td class="column5 style4 n">-0.1</td>
+									<td class="column6 style4 n">-0.3</td>
+									<td class="column7 style4 n">-0.4</td>
+									<td class="column8 style4 n">-0.6</td>
+									<td class="column9 style4 n">-0.9</td>
+									<td class="column10 style4 n">-1.2</td>
+									<td class="column11 style4 n">-1.3</td>
+									<td class="column12 style4 n">-1.2</td>
+								</tr>
+								<tr class="row3">
+									<td class="column0 style3 s">2019</td>
+									<td class="DJF">0.7</td>
+									<td class="column2 style4 n">0.7</td>
+									<td class="column3 style4 n">0.7</td>
+									<td class="column4 style4 n">0.7</td>
+									<td class="column5 style4 n">0.5</td>
+									<td class="column6 style4 n">0.5</td>
+									<td class="column7 style4 n">0.3</td>
+									<td class="column8 style4 n">0.1</td>
+									<td class="column9 style4 n">0.2</td>
+									<td class="column10 style4 n">0.3</td>
+									<td class="column11 style4 n">0.5</td>
+									<td class="column12 style4 n">0.5</td>
+								</tr>
+								<tr class="row4">
+									<td class="column0 style3 s">2018</td>
+									<td class="DJF">-0.9</td>
+									<td class="column2 style4 n">-0.9</td>
+									<td class="column3 style4 n">-0.7</td>
+									<td class="column4 style4 n">-0.5</td>
+									<td class="column5 style4 n">-0.2</td>
+									<td class="column6 style4 n">0</td>
+									<td class="column7 style4 n">0.1</td>
+									<td class="column8 style4 n">0.2</td>
+									<td class="column9 style4 n">0.5</td>
+									<td class="column10 style4 n">0.8</td>
+									<td class="column11 style4 n">0.9</td>
+									<td class="column12 style4 n">0.8</td>
+								</tr>
+								<tr class="row5">
+									<td class="column0 style3 s">2017</td>
+									<td class="column1 style4 n">-0.3</td>
+									<td class="column2 style4 n">-0.2</td>
+									<td class="column3 style4 n">0.1</td>
+									<td class="column4 style4 n">0.2</td>
+									<td class="column5 style4 n">0.3</td>
+									<td class="column6 style4 n">0.3</td>
+									<td class="column7 style4 n">0.1</td>
+									<td class="column8 style4 n">-0.1</td>
+									<td class="column9 style4 n">-0.4</td>
+									<td class="column10 style4 n">-0.7</td>
+									<td class="column11 style4 n">-0.8</td>
+									<td class="column12 style4 n">-1</td>
+								</tr>
+								<tr class="row6">
+									<td class="column0 style3 s">2016</td>
+									<td class="column1 style4 n">2.5</td>
+									<td class="column2 style4 n">2.1</td>
+									<td class="column3 style4 n">1.6</td>
+									<td class="column4 style4 n">0.9</td>
+									<td class="column5 style4 n">0.4</td>
+									<td class="column6 style4 n">-0.1</td>
+									<td class="column7 style4 n">-0.4</td>
+									<td class="column8 style4 n">-0.5</td>
+									<td class="column9 style4 n">-0.6</td>
+									<td class="column10 style4 n">-0.7</td>
+									<td class="column11 style4 n">-0.7</td>
+									<td class="column12 style4 n">-0.6</td>
+								</tr>
+								<tr class="row7">
+									<td class="column0 style3 s">2015</td>
+									<td class="column1 style4 n">0.5</td>
+									<td class="column2 style4 n">0.5</td>
+									<td class="column3 style4 n">0.5</td>
+									<td class="column4 style4 n">0.7</td>
+									<td class="column5 style4 n">0.9</td>
+									<td class="column6 style4 n">1.2</td>
+									<td class="column7 style4 n">1.5</td>
+									<td class="column8 style4 n">1.9</td>
+									<td class="column9 style4 n">2.2</td>
+									<td class="column10 style4 n">2.4</td>
+									<td class="column11 style4 n">2.6</td>
+									<td class="column12 style4 n">2.6</td>
+								</tr>
+								<tr class="row8">
+									<td class="column0 style3 s">2014</td>
+									<td class="column1 style4 n">-0.4</td>
+									<td class="column2 style4 n">-0.5</td>
+									<td class="column3 style4 n">-0.3</td>
+									<td class="column4 style4 n">0</td>
+									<td class="column5 style4 n">0.2</td>
+									<td class="column6 style4 n">0.2</td>
+									<td class="column7 style4 n">0</td>
+									<td class="column8 style4 n">0.1</td>
+									<td class="column9 style4 n">0.2</td>
+									<td class="column10 style4 n">0.5</td>
+									<td class="column11 style4 n">0.6</td>
+									<td class="column12 style4 n">0.7</td>
+								</tr>
+								<tr class="row9">
+									<td class="column0 style3 s">2013</td>
+									<td class="column1 style4 n">-0.4</td>
+									<td class="column2 style4 n">-0.4</td>
+									<td class="column3 style4 n">-0.3</td>
+									<td class="column4 style4 n">-0.3</td>
+									<td class="column5 style4 n">-0.4</td>
+									<td class="column6 style4 n">-0.4</td>
+									<td class="column7 style4 n">-0.4</td>
+									<td class="column8 style4 n">-0.3</td>
+									<td class="column9 style4 n">-0.3</td>
+									<td class="column10 style4 n">-0.2</td>
+									<td class="column11 style4 n">-0.2</td>
+									<td class="column12 style4 n">-0.3</td>
+								</tr>
+								<tr class="row10">
+									<td class="column0 style3 s">2012</td>
+									<td class="column1 style4 n">-0.9</td>
+									<td class="column2 style4 n">-0.7</td>
+									<td class="column3 style4 n">-0.6</td>
+									<td class="column4 style4 n">-0.5</td>
+									<td class="column5 style4 n">-0.3</td>
+									<td class="column6 style4 n">0</td>
+									<td class="column7 style4 n">0.2</td>
+									<td class="column8 style4 n">0.4</td>
+									<td class="column9 style4 n">0.4</td>
+									<td class="column10 style4 n">0.3</td>
+									<td class="column11 style4 n">0.1</td>
+									<td class="column12 style4 n">-0.2</td>
+								</tr>
+								<tr class="row11">
+									<td class="column0 style3 s">2011</td>
+									<td class="column1 style4 n">-1.4</td>
+									<td class="column2 style4 n">-1.2</td>
+									<td class="column3 style4 n">-0.9</td>
+									<td class="column4 style4 n">-0.7</td>
+									<td class="column5 style4 n">-0.6</td>
+									<td class="column6 style4 n">-0.4</td>
+									<td class="column7 style4 n">-0.5</td>
+									<td class="column8 style4 n">-0.6</td>
+									<td class="column9 style4 n">-0.8</td>
+									<td class="column10 style4 n">-1</td>
+									<td class="column11 style4 n">-1.1</td>
+									<td class="column12 style4 n">-1</td>
+								</tr>
+								<tr class="row12">
+									<td class="column0 style3 s">2010</td>
+									<td class="column1 style4 n">1.5</td>
+									<td class="column2 style4 n">1.2</td>
+									<td class="column3 style4 n">0.8</td>
+									<td class="column4 style4 n">0.4</td>
+									<td class="column5 style4 n">-0.2</td>
+									<td class="column6 style4 n">-0.7</td>
+									<td class="column7 style4 n">-1</td>
+									<td class="column8 style4 n">-1.3</td>
+									<td class="column9 style4 n">-1.6</td>
+									<td class="column10 style4 n">-1.6</td>
+									<td class="column11 style4 n">-1.6</td>
+									<td class="column12 style4 n">-1.6</td>
+								</tr>
+								<tr class="row13">
+									<td class="column0 style3 s">2009</td>
+									<td class="column1 style4 n">-0.8</td>
+									<td class="column2 style4 n">-0.8</td>
+									<td class="column3 style4 n">-0.6</td>
+									<td class="column4 style4 n">-0.3</td>
+									<td class="column5 style4 n">0</td>
+									<td class="column6 style4 n">0.3</td>
+									<td class="column7 style4 n">0.5</td>
+									<td class="column8 style4 n">0.6</td>
+									<td class="column9 style4 n">0.7</td>
+									<td class="column10 style4 n">1</td>
+									<td class="column11 style4 n">1.4</td>
+									<td class="column12 style4 n">1.6</td>
+								</tr>
+								<tr class="row14">
+									<td class="column0 style3 s">2008</td>
+									<td class="column1 style4 n">-1.6</td>
+									<td class="column2 style4 n">-1.5</td>
+									<td class="column3 style4 n">-1.3</td>
+									<td class="column4 style4 n">-1</td>
+									<td class="column5 style4 n">-0.8</td>
+									<td class="column6 style4 n">-0.6</td>
+									<td class="column7 style4 n">-0.4</td>
+									<td class="column8 style4 n">-0.2</td>
+									<td class="column9 style4 n">-0.2</td>
+									<td class="column10 style4 n">-0.4</td>
+									<td class="column11 style4 n">-0.6</td>
+									<td class="column12 style4 n">-0.7</td>
+								</tr>
+								<tr class="row15">
+									<td class="column0 style3 s">2007</td>
+									<td class="column1 style4 n">0.7</td>
+									<td class="column2 style4 n">0.2</td>
+									<td class="column3 style4 n">-0.1</td>
+									<td class="column4 style4 n">-0.3</td>
+									<td class="column5 style4 n">-0.4</td>
+									<td class="column6 style4 n">-0.5</td>
+									<td class="column7 style4 n">-0.6</td>
+									<td class="column8 style4 n">-0.8</td>
+									<td class="column9 style4 n">-1.1</td>
+									<td class="column10 style4 n">-1.3</td>
+									<td class="column11 style4 n">-1.5</td>
+									<td class="column12 style4 n">-1.6</td>
+								</tr>
+								<tr class="row16">
+									<td class="column0 style3 s">2006</td>
+									<td class="column1 style4 n">-0.9</td>
+									<td class="column2 style4 n">-0.8</td>
+									<td class="column3 style4 n">-0.6</td>
+									<td class="column4 style4 n">-0.4</td>
+									<td class="column5 style4 n">-0.1</td>
+									<td class="column6 style4 n">0</td>
+									<td class="column7 style4 n">0.1</td>
+									<td class="column8 style4 n">0.3</td>
+									<td class="column9 style4 n">0.5</td>
+									<td class="column10 style4 n">0.8</td>
+									<td class="column11 style4 n">0.9</td>
+									<td class="column12 style4 n">0.9</td>
+								</tr>
+								<tr class="row17">
+									<td class="column0 style3 s">2005</td>
+									<td class="column1 style4 n">0.6</td>
+									<td class="column2 style4 n">0.6</td>
+									<td class="column3 style4 n">0.4</td>
+									<td class="column4 style4 n">0.4</td>
+									<td class="column5 style4 n">0.3</td>
+									<td class="column6 style4 n">0.1</td>
+									<td class="column7 style4 n">-0.1</td>
+									<td class="column8 style4 n">-0.1</td>
+									<td class="column9 style4 n">-0.1</td>
+									<td class="column10 style4 n">-0.3</td>
+									<td class="column11 style4 n">-0.6</td>
+									<td class="column12 style4 n">-0.8</td>
+								</tr>
+								<tr class="row18">
+									<td class="column0 style3 s">2004</td>
+									<td class="column1 style4 n">0.4</td>
+									<td class="column2 style4 n">0.3</td>
+									<td class="column3 style4 n">0.2</td>
+									<td class="column4 style4 n">0.2</td>
+									<td class="column5 style4 n">0.2</td>
+									<td class="column6 style4 n">0.3</td>
+									<td class="column7 style4 n">0.5</td>
+									<td class="column8 style4 n">0.6</td>
+									<td class="column9 style4 n">0.7</td>
+									<td class="column10 style4 n">0.7</td>
+									<td class="column11 style4 n">0.7</td>
+									<td class="column12 style4 n">0.7</td>
+								</tr>
+								<tr class="row19">
+									<td class="column0 style3 s">2003</td>
+									<td class="column1 style4 n">0.9</td>
+									<td class="column2 style4 n">0.6</td>
+									<td class="column3 style4 n">0.4</td>
+									<td class="column4 style4 n">0</td>
+									<td class="column5 style4 n">-0.3</td>
+									<td class="column6 style4 n">-0.2</td>
+									<td class="column7 style4 n">0.1</td>
+									<td class="column8 style4 n">0.2</td>
+									<td class="column9 style4 n">0.3</td>
+									<td class="column10 style4 n">0.3</td>
+									<td class="column11 style4 n">0.4</td>
+									<td class="column12 style4 n">0.4</td>
+								</tr>
+								<tr class="row20">
+									<td class="column0 style3 s">2002</td>
+									<td class="column1 style4 n">-0.1</td>
+									<td class="column2 style4 n">0</td>
+									<td class="column3 style4 n">0.1</td>
+									<td class="column4 style4 n">0.2</td>
+									<td class="column5 style4 n">0.4</td>
+									<td class="column6 style4 n">0.7</td>
+									<td class="column7 style4 n">0.8</td>
+									<td class="column8 style4 n">0.9</td>
+									<td class="column9 style4 n">1</td>
+									<td class="column10 style4 n">1.2</td>
+									<td class="column11 style4 n">1.3</td>
+									<td class="column12 style4 n">1.1</td>
+								</tr>
+								<tr class="row21">
+									<td class="column0 style3 s">2001</td>
+									<td class="column1 style4 n">-0.7</td>
+									<td class="column2 style4 n">-0.5</td>
+									<td class="column3 style4 n">-0.4</td>
+									<td class="column4 style4 n">-0.3</td>
+									<td class="column5 style4 n">-0.3</td>
+									<td class="column6 style4 n">-0.1</td>
+									<td class="column7 style4 n">-0.1</td>
+									<td class="column8 style4 n">-0.1</td>
+									<td class="column9 style4 n">-0.2</td>
+									<td class="column10 style4 n">-0.3</td>
+									<td class="column11 style4 n">-0.3</td>
+									<td class="column12 style4 n">-0.3</td>
+								</tr>
+								<tr class="row22">
+									<td class="column0 style3 s">2000</td>
+									<td class="column1 style4 n">-1.7</td>
+									<td class="column2 style4 n">-1.4</td>
+									<td class="column3 style4 n">-1.1</td>
+									<td class="column4 style4 n">-0.8</td>
+									<td class="column5 style4 n">-0.7</td>
+									<td class="column6 style4 n">-0.6</td>
+									<td class="column7 style4 n">-0.6</td>
+									<td class="column8 style4 n">-0.5</td>
+									<td class="column9 style4 n">-0.5</td>
+									<td class="column10 style4 n">-0.6</td>
+									<td class="column11 style4 n">-0.7</td>
+									<td class="column12 style4 n">-0.7</td>
+									<td class="column13">&nbsp;</td>
+									<td class="column14">&nbsp;</td>
+								</tr>
+								<tr class="row23">
+									<td class="column0 style3 s">1999</td>
+									<td class="column1 style4 n">-1.5</td>
+									<td class="column2 style4 n">-1.3</td>
+									<td class="column3 style4 n">-1.1</td>
+									<td class="column4 style4 n">-1</td>
+									<td class="column5 style4 n">-1</td>
+									<td class="column6 style4 n">-1</td>
+									<td class="column7 style4 n">-1.1</td>
+									<td class="column8 style4 n">-1.1</td>
+									<td class="column9 style4 n">-1.2</td>
+									<td class="column10 style4 n">-1.3</td>
+									<td class="column11 style4 n">-1.5</td>
+									<td class="column12 style4 n">-1.7</td>
+								</tr>
+								<tr class="row24">
+									<td class="column0 style3 s">1998</td>
+									<td class="column1 style4 n">2.2</td>
+									<td class="column2 style4 n">1.9</td>
+									<td class="column3 style4 n">1.4</td>
+									<td class="column4 style4 n">1</td>
+									<td class="column5 style4 n">0.5</td>
+									<td class="column6 style4 n">-0.1</td>
+									<td class="column7 style4 n">-0.8</td>
+									<td class="column8 style4 n">-1.1</td>
+									<td class="column9 style4 n">-1.3</td>
+									<td class="column10 style4 n">-1.4</td>
+									<td class="column11 style4 n">-1.5</td>
+									<td class="column12 style4 n">-1.6</td>
+								</tr>
+								<tr class="row25">
+									<td class="column0 style3 s">1997</td>
+									<td class="column1 style4 n">-0.5</td>
+									<td class="column2 style4 n">-0.4</td>
+									<td class="column3 style4 n">-0.1</td>
+									<td class="column4 style4 n">0.3</td>
+									<td class="column5 style4 n">0.8</td>
+									<td class="column6 style4 n">1.2</td>
+									<td class="column7 style4 n">1.6</td>
+									<td class="column8 style4 n">1.9</td>
+									<td class="column9 style4 n">2.1</td>
+									<td class="column10 style4 n">2.3</td>
+									<td class="column11 style4 n">2.4</td>
+									<td class="column12 style4 n">2.4</td>
+								</tr>
+
+								
+								<tfoot>
+									<tr>
+										<th></th>
+										<th>DJF</th>
+										<th>JFM</th>
+										<th>FMA</th>
+										<th>MAM</th>
+										<th>AMJ</th>
+										<th>MJJ</th>
+										<th>JJA</th>
+										<th>JAS</th>
+										<th>ASO</th>
+										<th>SON</th>
+										<th>OND</th>
+										<th>NDJ</th>
+									</tr>
+								</tfoot>
+							</table>
+
+
+
+						</div>
+					</div>
+				</section>
+
+				<footer class="pie-pagina mt-5" role="contentinfo">
+					<img class="footer-top-img" src="img/assets/top.svg" alt="">
+
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg-4 text-center mb-4">
+								<a href="#">
+									<img src="img/ciat.png" width="200px">
+								</a>
+							</div>
+							<div class="col-12 col-lg-4 text-center mb-4">
+								<a href="#">
+									<img src="img/icdf.png" width="200px">
+								</a>
+							</div>
+							<div class="col-12 col-lg-4 text-center mb-4">
+								<a href="#">
+									<img src="img/logohackaton-2021.png" width="200px">
+								</a>
+							</div>
+
+
+
+						</div>
+
+						<div class="row justify-content-lg-between aling-items-start text-light">
+							<div class="parrafo col-lg-4 mt-5">
+								<h2>About Us</h2>
+								<p class="text-justify">Friendly Crop Modeling (developed by Office farmers)
+								We are a group consisting of agronomist, programmer, designer, statistician, and scientist to dedicate ourselves to improving the production and lives of 5 hundred million small farmers in the world. </a></p>
+							</div>
+							<div class="sitemap col-lg-4 mt-5">
+								<h2>SiteMap</h2>
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">How It Works</a></li>
+									<li><a href="#">Explore</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+
+							</div>
+							<div class="direccion col-lg-4 mt-5">
+								<h2>Contact</h2>
+								<div class="card-body">
+									<i class="fa fa-phone"></i>
+									<p class="d-inline ml-2">+505 00000 00000</p><br>
+									<i class="fa fa-map"></i>
+									<p class="d-inline ml-2">Managua, Nicaragua</p><br>
+									<i class="fa fa-envelope"></i>
+									<p class="d-inline ml-2">friendlycropmodeling@gmail.com</p><br>
+
+								</div>
+							</div>
+							<div class=" col-12 copy text-center mt-5">
+								<p>© 2021 Friendly Crop Modeling</p>
+								<ul>
+									<li class="d-inline-block"><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li class="d-inline-block"><a href="#"><i class="fa fa-youtube"></i></a></li>
+									<li class="d-inline-block"><a href="#"><i class="fa fa-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+
+
+
+				<img src="img/assets/bottom.svg" alt="">
+
+			</footer>
+
+
+
+
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+
+			<!-- datatables-->
+			<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+			<!-- datatables extension SELECT -->
+			<script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+
+			<!-- extension BOTONES -->
+			<script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+
+			<!-- extension RESPONSIVE -->
+			<script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+			<!-- extension SUM -->
+			<script src="https://cdn.datatables.net/plug-ins/1.10.25/api/sum().js"></script>
+
+
+			<script>
+
+				$(document).ready(function() {
+				 $('#oni').DataTable({
+				  responsive: true,
+				  select: true,
+				  select: {
+					      items:'cell',
+					      style: 'multi'
+					    },
+				 
+				/*$(document).ready(function(){
+
+					var table = $("#example").DataTable({
+
+					    select:true,
+					    select: {
+					      items:'cell',
+					      style: 'multi'
+					    },
+						    rowReorder: {
+		           			 selector: 'td:nth-child(2)'
+		      		  },
+
+
+
+
+					        	/*  responsive: true,
+		              select:true,
+		             // 3 - fila o celda 
+		              select:{            
+		                items:'cell' //cell o row      
+		              }*/
+
+							/*"createdRow":function(row,data,dataIndex ){
+						if(data[1] >0){
+							$('td',row).eq(5).css({
+								'background-color':'#ff5252',
+								'color':'white',
+							});
+						}
+					}*/
+
+           
+                });
+
+				// 	 var cell = table.cell( this );
+
+
+				//   var tot = cell.data( cell.data() + 1 ).draw().sum();
+
+				// $("#promedio").text(tot);
+
+
+
+				});
+
+
+				// let tds = document.getElementsByClassName('selected');
+
+				// if( tds){
+				// 	console.log(tds);
+				// }
+
+
+// 				var t = document.getElementById("oni");
+// 				for (var r = 0; r < t.rows.length; r++) {
+// 					for (var c = 0; c < t.rows[r].cells.length; c++) {
+												
+// 						t.rows[r].cells[c].onclick=function() { console.log(this.innerHTML); }
+
+// 					}
+// }
+
+
+
+
+
+
+
+				// var t = document.getElementById("oni");
+				// var trs = document.querySelectorAll("td.selected");
+				// var tds = null;
+
+				// console.log(trs.length);
+
+				// for (var i=0; i<trs.length; i++)
+				// {
+				// 	tds = trs[i].getElementsByTagName("td");
+				// 	for (var n=0; n<tds.length;n++)
+				// 	{
+				// 		tds[n].onclick=function() { console.log(this.innerHTML); }
+				// 	}
+				// }
+
+
+
+
+
+
+
+
+
+			</script>
+
+		</body>
+
+		</html>
